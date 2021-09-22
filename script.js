@@ -1,35 +1,62 @@
 const gridContainer = document.querySelector("#gridContainer");
-gridContainer.style.display="flex".flexDirection="row";
 
-const gridBox = document.createElement('div');
-let gridRow = document.createElement('div');
+
+const gridRow = document.createElement('div');
 gridRow.setAttribute("id", "gridRow");
+const gridBox = document.createElement('div');
 gridBox.setAttribute("id", "gridBox");
 
-
-// gridBox.style.backgroundColor = "blue";
-gridBox.style.height = "auto".width="45px";
-
-
-gridContainer.appendChild(gridRow);
-
-// gridRow.style.height = "10px".width="10px"
-// gridRow.style.backgroundColor = "red"
+// function changeColor(i) {boxList[i].style.backgroundColor="black";
+//  console.log(i)}
 
 
- for (i = 0; i < 15; i++)
+
+
+// GRID SIZE
+ for (i = 0; i < 64; i++)
  { gridRow.appendChild(gridBox.cloneNode(true))};
  
-for ( i = 0; i < 15; i++)
- { gridContainer.appendChild(gridRow.cloneNode(true)) }
+for ( i = 0; i < 64; i++)
+ { gridContainer.appendChild(gridRow.cloneNode(true))
+};
 
+/// all boxes nodelist
+let boxList = document.querySelectorAll("#gridBox");
+
+//Change background color of specified box
+for (i = 0; i < boxList.length; i++)
+ {let currentBox = boxList[i]; boxList[i].addEventListener("mouseover", function(){ 
+     currentBox.style.backgroundColor="black";})
+  }
+
+
+
+
+
+
+
+// Box size:
+// NEED TO CALC SIZE *** 
+gridBox.style.height="12.5px"
+gridBox.style.width="12.5px"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
  
 
-// let gridRow = rpw()for( i = 0; i < 16; i++)
-// { gridRow.appendChild(gridBox)};
 
 
-
-
-
+ 
 

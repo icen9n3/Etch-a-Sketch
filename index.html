@@ -4,29 +4,33 @@
 <style>
     #gridContainer{
         height: 800px;
-        width: 800px;
-         
+        width: 800px;   
           
-        
     }
      
 
-    #gridRow{border: 1px solid blue;
-      display:flex;
-      flex-direction: row;
-          flex-grow: 1;
+    #gridRow
+    {  
+    display:flex;    
+    flex: 1;
+    } 
      
       
           
 
-    }
+    
 
     #gridBox{ 
         flex:1;
-        
-     
-border: 1px solid red
+         height:12.5px;
+         width:12.5px;   
+        border: 1px solid blue
     }
+   
+    #reset{
+
+    }
+
         
     
 </style>
@@ -38,6 +42,9 @@ border: 1px solid red
 
 <body>
     <h1>Etch-a-Sketch</h1>
+    
+    <button onclick="location.reload();">Reset Page</button>
+
     <div id="gridContainer"></div>
 </body>
 
