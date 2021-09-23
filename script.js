@@ -1,11 +1,10 @@
 const gridContainer = document.querySelector("#gridContainer");
-gridNumber = prompt("How many box")
-boxSize = 800/gridNumber + "px"
 
+//prompt set gridBox size 
+gridNumber = prompt("Set the Box legnth - <= 100", "Number Here")
+boxSize = 800 / gridNumber + "px"
 
-
-
-
+//
 const gridRow = document.createElement('div');
 gridRow.setAttribute("id", "gridRow");
 const gridBox = document.createElement('div');
@@ -15,7 +14,7 @@ gridBox.style.height=boxSize
 gridBox.style.width=boxSize
 
 
-// GRID SIZE
+// CREATES GRID based on gridNumber
  for (i = 0; i < gridNumber; i++)
  { gridRow.appendChild(gridBox.cloneNode(true))};
  
@@ -29,12 +28,11 @@ let boxList = document.querySelectorAll("#gridBox");
 //Change background color of specified box
 for (i = 0; i < boxList.length; i++)
  {let currentBox = boxList[i]; boxList[i].addEventListener("mouseover", function(){ 
-     currentBox.style.backgroundColor="black";})
+     currentBox.style.backgroundColor=colorSelect.value;})
   }
 
 
-
-
+let colorSelect = document.querySelector("#colorSelect")
 
 
 
