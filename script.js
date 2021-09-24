@@ -1,5 +1,5 @@
 const gridContainer = document.querySelector("#gridContainer");
-
+  const erase = document.getElementById("erase");
 //prompt set gridBox size 
 gridNumber = prompt("Set the Box legnth - <= 100", "Number Here")
 boxSize = 800 / gridNumber + "px"
@@ -24,15 +24,41 @@ for ( i = 0; i < gridNumber; i++)
 
 /// all boxes nodelist
 let boxList = document.querySelectorAll("#gridBox");
+let colorValue = colorSelect.value
 
-//Change background color of specified box
+erase.addEventListener("click", function(){colorSelect.value="#ffffff"});
+colorBlack.addEventListener("click", function(){colorSelect.value="#000000"});
+randomColor.addEventListener("click", function(){colorSelect.value='#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');})
+
+
+  // function changeColor(color) { currentBox.style.backgroundColor=color};
+// Change background color of specified box
 for (i = 0; i < boxList.length; i++)
- {let currentBox = boxList[i]; boxList[i].addEventListener("mouseover", function(){ 
-     currentBox.style.backgroundColor=colorSelect.value;})
-  }
+ {let currentBox = boxList[i]; 
 
 
-let colorSelect = document.querySelector("#colorSelect")
+
+
+  // boxList[i].addEventListener("mouseover", function() {changeColor(colorSelect.value)});
+  
+  currentBox.addEventListener("mouseover", function(){ 
+     currentBox.style.backgroundColor=colorSelect.value})
+
+
+     //works but wont shut off
+// erase.addEventListener("click", function(){
+//   currentBox.addEventListener("mouseover", function(){ 
+//      currentBox.style.backgroundColor="white"})})
+
+
+  const reset = document.getElementById("reset");
+  reset.addEventListener("click", function() {currentBox.style.backgroundColor="white"} )
+
+
+
+  // erase.addEventListener("click", function(){ 
+    }
+
 
 
 

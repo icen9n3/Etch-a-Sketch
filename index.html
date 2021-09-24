@@ -32,6 +32,10 @@
 
     }
 
+    #colorSelect{
+        
+    }
+
         
     
 </style>
@@ -44,14 +48,18 @@
 <body>
     <h1>Etch-a-Sketch</h1>
     
-    <button onclick="location.reload();">Reset Page</button>
+    <button onclick="location.reload();">Choose new Grid Size</button>
 
-    <!-- <form action="/action_page.php"> -->
+    <form action="/action_page.php">
         <label for="favcolor">Select a Color</label>
-        <input type="color" id="colorSelect" name="colorSelect" value="#0000"><br><br>
-        
-      </form>
+        <input type="color" id="colorSelect" name="colorSelect" value="#000000"><br><br>
+     </form>
 
+ <button id="reset">Reset</button>
+ <button id="erase">Erase</button>
+ <button id="colorBlack">Black</button>
+
+<button id="randomColor">Random Color</button>
     <div id="gridContainer"></div>
 </body>
 
