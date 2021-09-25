@@ -87,7 +87,7 @@ reset.addEventListener("click", resetPage)
   // erase.addEventListener("click", function(){ 
     }};
 
-
+drawGrid();
 // Box size:
 // NEED TO CALC SIZE *** 
 
