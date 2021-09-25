@@ -1,27 +1,30 @@
 const gridContainer = document.querySelector("#gridContainer");
 const erase = document.getElementById("erase");  
 const slider = document.getElementById("slider");
+const rainbow = document.getElementById("rainbow")
 const sliderAmount = document.getElementById("sliderAmount");
 const reset = document.getElementById("reset");
+const rainbowOff = document.getElementById("rainbowOff")
+
+// function rainbowToggle(rainbowSwitch){
+
+//  while(rainbowSwitch == "on")
+  // if(rainbowSwitch == "off")
+  // {}
+  // else if(rainbowSwitch == "on")
+  // {function rainbowColor(){colorSelect.value='#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');}}
+  // else{rainbowSwitch == "off"}}
 
 
 //Slider text
 sliderAmount.innerHTML = slider.value+"x"+slider.value;
-// sliderNumber = slider.value;
 
 //slider output to drawGrid
 slider.onchange =function(){sliderAmount.innerHTML= slider.value+"x"+slider.value;
-drawGrid()}
-
-
-
+drawGrid()};
 
 //prompt set gridBox size 
-
 let drawGrid = function () {
-
-
-
 
 const allRows = document.querySelectorAll("#gridRow")
 const gridRow = document.createElement('div');
@@ -53,7 +56,7 @@ for ( i = 0; i < gridNumber; i++)
 
 /// all boxes in a nodelist
 let boxList = document.querySelectorAll("#gridBox");
-let colorValue = colorSelect.value
+
 
 
 //button listeners
@@ -62,13 +65,16 @@ colorBlack.addEventListener("click", function(){colorSelect.value="#000000"});
 randomColor.addEventListener("click", function(){colorSelect.value='#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');})
 
 
+// rainbow.addEventListener("click", rainbowToggle("on"))
+// rainbowOff.addEventListener("click", rainbowToggle("off"))
+
+
+
+
+
 
 for (i = 0; i < boxList.length; i++)
  {let currentBox = boxList[i]; 
-
-
-
-
  
   currentBox.addEventListener("mouseover", function(){ 
      currentBox.style.backgroundColor=colorSelect.value})
@@ -86,15 +92,11 @@ for (i = 0; i < boxList.length; i++)
 reset.addEventListener("click", resetPage)
 
 
-  // erase.addEventListener("click", function(){ 
+
     }};
 
+//calls on load 
 drawGrid();
-// Box size:
-// NEED TO CALC SIZE *** 
-
-
-
 
 
 
