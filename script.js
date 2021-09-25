@@ -5,17 +5,14 @@ const rainbow = document.getElementById("rainbow")
 const sliderAmount = document.getElementById("sliderAmount");
 const reset = document.getElementById("reset");
 const rainbowOff = document.getElementById("rainbowOff")
-
-// function rainbowToggle(rainbowSwitch){
-
-//  while(rainbowSwitch == "on")
-  // if(rainbowSwitch == "off")
-  // {}
-  // else if(rainbowSwitch == "on")
-  // {function rainbowColor(){colorSelect.value='#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');}}
-  // else{rainbowSwitch == "off"}}
+let rainbowSwitch = 0;
 
 
+//   else
+//   (rainbowSwitch == 2)
+//  {rainbowSwitch = 0 }}}
+
+//   }}
 //Slider text
 sliderAmount.innerHTML = slider.value+"x"+slider.value;
 
@@ -64,8 +61,17 @@ erase.addEventListener("click", function(){colorSelect.value="#ffffff"});
 colorBlack.addEventListener("click", function(){colorSelect.value="#000000"});
 randomColor.addEventListener("click", function(){colorSelect.value='#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');})
 
+// function rainbowToggle(rainbowSwitch)
+// {
+// function add1(rainbowSwitch) {rainbowSwitch =+ 1}
 
-// rainbow.addEventListener("click", rainbowToggle("on"))
+// add1();
+//  while(rainbowSwitch == 1)
+//   {if(rainbowSwitch == 1)
+//   {let randomColo = function () {colorSelect.value='#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');};
+  
+
+// rainbow.addEventListener("click", rainbowToggle(rainbowSwitch += 1))
 // rainbowOff.addEventListener("click", rainbowToggle("off"))
 
 
