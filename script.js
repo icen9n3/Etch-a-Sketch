@@ -1,12 +1,15 @@
 const gridContainer = document.querySelector("#gridContainer");
-  const erase = document.getElementById("erase");  
+const erase = document.getElementById("erase");  
 const slider = document.getElementById("slider");
 const sliderAmount = document.getElementById("sliderAmount");
-  const reset = document.getElementById("reset");
+const reset = document.getElementById("reset");
 
+
+//Slider text
 sliderAmount.innerHTML = slider.value+"x"+slider.value;
-sliderNumber = slider.value;
+// sliderNumber = slider.value;
 
+//slider output to drawGrid
 slider.onchange =function(){sliderAmount.innerHTML= slider.value+"x"+slider.value;
 drawGrid()}
 
@@ -21,17 +24,16 @@ let drawGrid = function () {
 
 
 const allRows = document.querySelectorAll("#gridRow")
-
 const gridRow = document.createElement('div');
 gridRow.setAttribute("id", "gridRow");
 const gridBox = document.createElement('div');
 gridBox.setAttribute("id", "gridBox");
 
-//Resets grid if allRows value is greater than zero
+//Resets grid when slider changes
 for( i = 0; i < allRows.length; i++)
 {allRows[i].remove();}
-// 
 
+//sets gridNumber to slider value
 gridNumber = slider.value;
 
 boxSize = 800 / gridNumber + "px";
@@ -49,25 +51,25 @@ for ( i = 0; i < gridNumber; i++)
 };
 
 
-/// all boxes nodelist
+/// all boxes in a nodelist
 let boxList = document.querySelectorAll("#gridBox");
 let colorValue = colorSelect.value
 
+
+//button listeners
 erase.addEventListener("click", function(){colorSelect.value="#ffffff"});
 colorBlack.addEventListener("click", function(){colorSelect.value="#000000"});
 randomColor.addEventListener("click", function(){colorSelect.value='#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');})
 
 
-  // function changeColor(color) { currentBox.style.backgroundColor=color};
-// Change background color of specified box
+
 for (i = 0; i < boxList.length; i++)
  {let currentBox = boxList[i]; 
 
 
 
 
-  // boxList[i].addEventListener("mouseover", function() {changeColor(colorSelect.value)});
-  
+ 
   currentBox.addEventListener("mouseover", function(){ 
      currentBox.style.backgroundColor=colorSelect.value})
 
