@@ -4,6 +4,7 @@ const slider = document.getElementById("slider");
 const rainbow = document.getElementById("rainbow")
 const sliderAmount = document.getElementById("sliderAmount");
 const reset = document.getElementById("reset");
+rainbow.addEventListener("click", function(){setSwitchValue(switchValue)});
 let switchValue = 0;
 function setSwitchValue() {
   
@@ -17,7 +18,7 @@ else if (switchValue == 0)
 
 
 //RAINBOW TOGGLE 
-rainbow.addEventListener("click", function(){setSwitchValue(switchValue)});
+
 
 //   else
 //   (rainbowSwitch == 2)
@@ -25,10 +26,10 @@ rainbow.addEventListener("click", function(){setSwitchValue(switchValue)});
 
 //   }}
 //Slider text
-sliderAmount.innerHTML = slider.value+"x"+slider.value;
+sliderAmount.innerHTML = "Grid Size: "+slider.value+"x"+slider.value;
 
 //slider output to drawGrid
-slider.onchange =function(){sliderAmount.innerHTML= slider.value+"x"+slider.value;
+slider.onchange =function(){sliderAmount.innerHTML= "Grid Size: "+slider.value+"x"+slider.value;
 drawGrid()};
 
 //prompt set gridBox size 

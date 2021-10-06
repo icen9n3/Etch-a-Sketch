@@ -2,46 +2,14 @@
 <html>
 
 <style>
-    #gridContainer{
-        height: 800px;
-        width: 800px;  
-        border: 1px solid black 
-          
-    }
-     
-
-    #gridRow
-    {  
-    display:flex;    
-    flex: 1;
-    } 
-     
-      
-          
-
-    
-
-    #gridBox{ 
-        flex:1;
-         /* height:12.5px;
-         width:12.5px;    */
-       
-    }
    
-    #reset{
-
-    }
-
-    #colorSelect{
-        
-    }
-
         
     
 </style>
 
 
 <head>
+<link rel="stylesheet" href="style.css">
 <meta charset="utf-8"> 	</meta>
 </head>
 
@@ -49,23 +17,28 @@
     <h1>Etch-a-Sketch</h1>
     
     <!-- <button onclick="location.reload(true);">Choose new Grid Size</button> -->
+
+<div id="buttons">
  <button id="reset">Reset</button>
  <button id="erase">Erase</button>
  <button id="colorBlack">Black</button>
  <button id="randomColor">Random Color</button>  
  <button id="rainbow"> Rainbow </button> 
- <button id="rainbowOff"> Rainbow off </button> 
+
  
  <form action="/action_page.php">
         <label for="favcolor">Select a Color</label>
         <input type="color" id="colorSelect" name="colorSelect" value="#000000"><br><br>
      </form>
-
-
+  
+     <div id="sliderAmount"></div>
+</div>
+<div id="sliderWhole">
      <div class="slidecontainer">
         <input type="range" min="1" max="100" value="16" class="slider" id="slider">
       </div>
-      <div id="sliderAmount"></div>
+      
+</div>
 
     <div id="gridContainer"></div>
 </body>

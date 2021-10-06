@@ -1,0 +1,70 @@
+
+body {
+    display:flex;    
+    flex-direction: column;
+    justify-content: center;
+    /* background-image: linear-gradient(to right, purple , mistyrose); */
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+}
+
+#buttons {
+    margin:auto;
+}
+
+h1 {
+    margin:auto;
+}
+
+
+#gridContainer{
+    height: 800px;
+    width: 800px;  
+    border: 1px solid gray ;   
+  margin: auto;
+  background-color: white;
+      
+}
+ 
+
+
+#gridRow
+{  
+display:flex;    
+flex: 1;
+} 
+ 
+  
+      
+
+
+
+#gridBox{ 
+    flex:1;
+     /* height:12.5px;
+     width:12.5px;    */
+   
+}
+
+#sliderWhole {
+    margin: auto;
+    
+}
+
+#sliderAmount {
+    font-size: 20px;
+    padding: 25px 0px 15px 100px
+}
+
+.slider {
+width:350px;
+margin-bottom:25px;
+}
+
+
+#reset{
+
+}
+
+#colorSelect{
+    
+}
