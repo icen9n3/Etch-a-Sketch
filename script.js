@@ -4,11 +4,20 @@ const slider = document.getElementById("slider");
 const rainbow = document.getElementById("rainbow")
 const sliderAmount = document.getElementById("sliderAmount");
 const reset = document.getElementById("reset");
-const rainbowOff = document.getElementById("rainbowOff")
-let rainbowSwitch = 0;
-let hoverNumber = 0;
 let switchValue = 0;
+function setSwitchValue() {
+  
+  
+   if (switchValue == 1)
+   {switchValue = 0}
 
+else if (switchValue == 0)
+{ switchValue = 1;}
+ }
+
+
+//RAINBOW TOGGLE 
+rainbow.addEventListener("click", function(){setSwitchValue(switchValue)});
 
 //   else
 //   (rainbowSwitch == 2)
@@ -24,6 +33,14 @@ drawGrid()};
 
 //prompt set gridBox size 
 let drawGrid = function () {
+
+
+ 
+function rainbowToggle(switchValue) 
+{
+  if (switchValue == 1)
+{ randomColor.click()}
+}
 
 const allRows = document.querySelectorAll("#gridRow")
 const gridRow = document.createElement('div');
@@ -73,7 +90,7 @@ randomColor.addEventListener("click", function(){colorSelect.value='#'+(Math.ran
 //   {let randomColo = function () {colorSelect.value='#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');};
   
 
-rainbow.addEventListener("click", function() {setSwitchValue()})
+
 
 
 
@@ -88,10 +105,10 @@ for (i = 0; i < boxList.length; i++)
  {let currentBox = boxList[i]; 
  
   currentBox.addEventListener("mouseover", function(){ 
-     currentBox.style.backgroundColor=colorSelect.value
-    hoverNumber += 1;
+     currentBox.style.backgroundColor=colorSelect.value;
+   
     rainbowToggle(switchValue);
-  })
+  });
 
 
      //works but wont shut off
@@ -113,26 +130,6 @@ reset.addEventListener("click", resetPage)
 drawGrid();
 
 
-//RAINBOW TOGGLE 
-
-function setSwitchValue() {
-  
-  
-   if (switchValue == 1)
-   {switchValue = 0}
-
-else if (switchValue == 0)
-{ switchValue = 1;}
- }
- 
-function rainbowToggle(switchValue) {
-  if (switchValue == 1)
-{ randomColor.click()
-}
-else 
-{switchValue -= 1
-  }
-}
 
 
       
